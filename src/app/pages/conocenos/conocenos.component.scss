@@ -1,0 +1,343 @@
+.conocenos-wrapper {
+  height: 100vh;
+  background: linear-gradient(135deg, #DBE3FE 0%, #B2C1FF 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(89, 109, 219, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .header-section {
+      text-align: center;
+
+      .logo-container {
+        margin-bottom: 1rem;
+
+        .logo {
+          width: 100px;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+
+      .title {
+        font-size: 2rem;
+        color: #596DDB;
+        margin: 0;
+      }
+    }
+
+    .team-section {
+      .team-header {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        h2 {
+          font-size: 1.5rem;
+          color: #3B3B3B;
+          margin: 0;
+        }
+
+        p {
+          color: #596DDB;
+          font-size: 1rem;
+          margin: 0.5rem 0 0;
+        }
+      }
+
+      .members-list {
+        .team-card {
+          background: #F6F9FC;
+          border-radius: 12px;
+          padding: 2rem;
+          margin-top: 1rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+          .team-names {
+            h3 {
+              font-size: 1.2rem;
+              color: #3B3B3B;
+              margin: 0.5rem 0;
+              font-weight: 500;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .thanks-section {
+      .thanks-content {
+        text-align: center;
+        padding-bottom: 2.5rem;
+
+
+        h2 {
+          font-size: 1.5rem;
+          color: #596DDB;
+          margin: 0 0 0.8rem;
+        }
+
+        p {
+          color: #6D6D6D;
+          margin: 0 0 1.2rem;
+          line-height: 1.4;
+          font-size: 0.9rem;
+        }
+
+        .tips-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: linear-gradient(135deg, #8194FF 0%, #596DDB 100%);
+          color: white;
+          padding: 0.8rem 1.5rem;
+          border-radius: 8px;
+          border: none;
+          font-size: 0.9rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 12px rgba(129, 148, 255, 0.3);
+
+          &:hover {
+            box-shadow: 0 6px 16px rgba(129, 148, 255, 0.4);
+            transform: translateY(-2px);
+          }
+
+          img {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) {
+    .content {
+      padding: 1.5rem;
+
+      .header-section {
+        .logo {
+          width: 110px;
+        }
+
+        .title {
+          font-size: 2.2rem;
+        }
+      }
+
+      .team-section {
+        .team-header {
+          h2 {
+            font-size: 1.6rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+          }
+        }
+
+        .members-grid {
+          gap: 1.2rem;
+
+          .member-card {
+            padding: 1.2rem;
+
+            .member-info {
+              h3 {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .thanks-section {
+        .thanks-content {
+          h2 {
+            font-size: 1.6rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+
+          .tips-button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 375px) {
+    .content {
+      padding: 2rem;
+
+      .header-section {
+        .logo {
+          width: 120px;
+        }
+      }
+
+      .team-section {
+        .members-grid {
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 414px) {
+    .content {
+      padding: 2.5rem;
+
+      .header-section {
+        .title {
+          font-size: 2.5rem;
+        }
+      }
+
+      .team-section {
+        .team-header {
+          h2 {
+            font-size: 1.8rem;
+          }
+        }
+
+        .members-grid {
+          gap: 2rem;
+        }
+      }
+
+      .thanks-section {
+        .thanks-content {
+          h2 {
+            font-size: 1.8rem;
+          }
+
+          .tips-button {
+            padding: 1.2rem 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      padding: 3rem;
+
+      .header-section {
+        .logo {
+          width: 150px;
+        }
+
+        .title {
+          font-size: 3rem;
+        }
+      }
+
+      .team-section {
+        .team-header {
+          h2 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .members-grid {
+          gap: 2.5rem;
+
+          .member-card {
+            padding: 1.5rem;
+
+            .member-info {
+              h3 {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .thanks-section {
+        .thanks-content {
+          h2 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+          }
+
+          .tips-button {
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .content {
+      padding: 3.5rem;
+
+      .header-section {
+        .title {
+          font-size: 3.5rem;
+        }
+      }
+
+      .team-section {
+        .team-header {
+          h2 {
+            font-size: 2.2rem;
+          }
+        }
+
+        .members-grid {
+          gap: 3rem;
+        }
+      }
+
+      .thanks-section {
+        .thanks-content {
+          h2 {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+  }
+}

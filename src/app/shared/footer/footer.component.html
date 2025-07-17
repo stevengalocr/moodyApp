@@ -1,0 +1,24 @@
+<footer class="footer">
+  <nav class="nav">
+    <a class="nav-item" [class.active]="activeRoute === 'home'" routerLink="/">
+      <img src="assets/icons/home.svg" alt="Inicio" />
+      <span>Inicio</span>
+    </a>
+    <a class="nav-item" [class.active]="activeRoute === 'tips'" routerLink="/tips">
+      <img src="assets/icons/lightbulb.svg" alt="Tips" />
+      <span>Tips</span>
+    </a>
+    <a class="nav-item" [class.active]="activeRoute === 'lugares'" routerLink="/lugares">
+      <img src="assets/icons/pin.svg" alt="Lugares" />
+      <span>Lugares</span>
+    </a>
+    <a class="nav-item" [class.active]="activeRoute === 'recordatorios'" routerLink="/recordatorios">
+      <img src="assets/icons/bell.svg" alt="Recordatorios" />
+      <span>Recordatorios</span>
+    </a>
+    <a class="nav-item" [class.active]="activeRoute === 'feedback'" routerLink="/feedback">
+      <img src="assets/icons/message.svg" alt="Feedback" />
+      <span>Feedback</span>
+    </a>
+  </nav>
+</footer>

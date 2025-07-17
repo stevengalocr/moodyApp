@@ -1,0 +1,112 @@
+// -----------------------------------
+// 🎨 Variables de color (Paleta MoodyApp)
+// -----------------------------------
+
+$blue-main: #B3CFFF;
+$blue-detail: #799BFF;
+$bg-light: #F6F9FC;
+$surface-light: #EDF2F7;
+$text-dark: #3B3B3B;
+$text-muted: #6D6D6D;
+$border-color: #D0D7DE;
+
+// Estados emocionales
+$happy: #FFF9C4;
+$sad: #DCD7F9;
+$angry: #FFD6D6;
+$anxious: #D2F5E3;
+$stressed: #D7E1F2;
+$scared: #E3E4FA;
+
+// -----------------------------------
+// 🖋️ Tipografía
+// -----------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $bg-light;
+  color: $text-dark;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: $text-dark;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 12px 0;
+  color: $text-muted;
+}
+
+a {
+  text-decoration: none;
+  color: $blue-detail;
+}
+
+button {
+  font-family: inherit;
+  background-color: $blue-detail;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($blue-detail, 8%);
+  }
+}
+
+.container {
+  padding: 16px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+// -----------------------------------
+// 🌐 Responsive & Layout helpers
+// -----------------------------------
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 { margin-top: 8px; }
+.mt-4 { margin-top: 16px; }
+.mb-4 { margin-bottom: 16px; }
+
+.w-full {
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+

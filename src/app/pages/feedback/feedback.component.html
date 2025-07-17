@@ -1,0 +1,82 @@
+<div class="feedback-wrapper">
+  <div class="logo-container">
+    <img src="assets/images/MoodyAppLogo.png" alt="Moody" class="logo"/>
+  </div>
+
+  <!-- <div class="title-container">
+    <h1 class="title">MoodyApp</h1>
+  </div> -->
+
+  <div class="feedback-content">
+    <div class="feedback-message">
+      <p>¡Dejanos tu opinión para mejorar cada vez más!</p>
+    </div>
+
+    <div class="form-container" *ngIf="showForm">
+      <form #feedbackForm="ngForm" (ngSubmit)="onSubmit()" class="feedback-form">
+        <!-- <div class="form-group">
+          <label for="name">Nombre</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            [(ngModel)]="formData.name" 
+            required
+            class="input-field"
+            #name="ngModel">
+        </div> -->
+
+        <div class="rating-group">
+          <label>¿Qué te pareció la app?</label>
+          <div class="stars-container">
+            <span *ngFor="let star of stars; let i = index" 
+                  class="star" 
+                  [class.selected]="formData.rating > i"
+                  (click)="setRating(i + 1)">
+              ★
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Comentario</label>
+          <textarea 
+            id="description" 
+            name="description" 
+            [(ngModel)]="formData.description" 
+            rows="2"
+            class="input-field"></textarea>
+        </div>
+
+        <div class="button-group">
+          <button 
+            type="submit" 
+            class="submit-button"
+            [disabled]="!formData.rating">
+            Enviar Feedback
+          </button>
+
+          <button 
+            (click)="navigateTo('conocenos')"
+            type="button" 
+            class="secondary-button"
+            routerLink="conocenos">
+            Conocenos
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="success-screen" *ngIf="showSuccess">
+      <div class="success-content">
+        <div class="success-icon">✅</div>
+        <div class="success-message">
+          ¡Gracias por tu comentario!
+        </div>
+        <div class="success-submessage">
+          Tu feedback será tomado en cuenta para la próxima actualización.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

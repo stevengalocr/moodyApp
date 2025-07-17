@@ -1,0 +1,219 @@
+.places-wrapper {
+  height: 100vh;
+  background-color: #F6F9FC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  padding: 1rem 0 0;
+  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.logo-container {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  width: 100%;
+  padding: 0 16px;
+
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 375px;
+  padding: 0 16px;
+  position: relative;
+  z-index: 10;
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3B3B3B;
+    margin: 0 0 0.25rem;
+  }
+
+  .selected-emotion {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6D6D6D;
+    margin: 0;
+  }
+}
+
+.emotions-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  padding: 0 12px;
+  width: 100%;
+  max-width: 375px;
+  position: sticky;
+  top: 0;
+  background-color: #F6F9FC;
+  z-index: 10;
+  padding-bottom: 8px;
+  margin-top: -0.75rem;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+
+  .emotion-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+
+    &.selected {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.places-container {
+  width: 100%;
+  max-width: 375px;
+  padding: 0 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+
+  .places-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 4rem;
+
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #F6F9FC;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #C4C4C4;
+      border-radius: 4px;
+    }
+
+    .no-places-message {
+      text-align: center;
+      color: #6D6D6D;
+      font-size: 16px;
+      margin: 2rem 0;
+    }
+
+    .place-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      margin-bottom: 1rem;
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      .place-header {
+        h3 {
+          font-size: 18px;
+          font-weight: 600;
+          color: #3B3B3B;
+          margin: 0 0 0.5rem;
+        }
+
+        .description {
+          font-size: 14px;
+          color: #6D6D6D;
+          margin: 0 0 1rem;
+          line-height: 1.4;
+        }
+
+        .separator {
+          width: 100%;
+          height: 1px;
+          background: #E5E5E5;
+          margin: 1rem 0;
+        }
+      }
+
+      .place-info {
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            img {
+              width: 16px;
+              height: 16px;
+            }
+
+            span {
+              font-size: 14px;
+              text-decoration: none;
+              color: #3B3B3B;
+
+              img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .map-container {
+      margin-top: 24px;
+      padding: 24px;
+      border-top: 1px solid #E0E0E0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+
+      .map-image {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        border-radius: 8%;
+      }
+    }
+  }
+}

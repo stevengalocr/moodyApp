@@ -1,0 +1,62 @@
+<div class="home-wrapper">
+  <div class="logo-container">
+    <img src="assets/images/MoodyAppLogo.png" alt="MoodyApp logo" class="logo" />
+    <p class="subtitle">Bienvenidos</p>
+  </div>
+
+  <div class="main-buttons">
+    <div class="btn tips" (click)="navigateTo('tips')" [routerLink]="['/tips']">
+      <img src="assets/icons/tips.svg" alt="Tips"/>
+      <span>Tips</span>
+    </div>
+    <div class="btn lugares" (click)="navigateTo('lugares')" [routerLink]="['/places']">
+      <img src="assets/icons/map.svg" alt="Lugares"/>
+      <span>Lugares</span>
+    </div>
+    <div class="btn recordatorios" (click)="navigateTo('recordatorios')" [routerLink]="['/reminders']">
+      <img src="assets/icons/dates.svg" alt="Recordatorios"/>
+      <span>Recordatorios</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">¿Cómo te sientes hoy?</h2>
+
+  <div class="emotions-grid">
+    <div class="emotion" [ngStyle]="{'background-color': '#FFF9C4'}" 
+         [routerLink]="['/tips']" 
+         [queryParams]="{emotion: 'Feliz'}">
+      <img src="assets/icons/feliz.svg" alt="Feliz"/>
+      <span class="label">Feliz</span>
+    </div>
+    <div class="emotion" [ngStyle]="{'background-color': '#DCD7F9'}" 
+         [routerLink]="['/tips']" 
+         [queryParams]="{emotion: 'Triste'}">
+      <img src="assets/icons/triste.svg" alt="Triste"/>
+      <span class="label">Triste</span>
+    </div>
+    <div class="emotion" [ngStyle]="{'background-color': '#D2F5E3'}" 
+         [routerLink]="['/tips']" 
+         [queryParams]="{emotion: 'Ansioso'}">
+      <img src="assets/icons/ansioso.svg"/>
+      <span class="label">Ansioso</span>
+    </div>
+    <div class="emotion" [ngStyle]="{'background-color': '#D7E1F2'}" 
+         [routerLink]="['/tips']" 
+         [queryParams]="{emotion: 'Estresado'}">
+      <img src="assets/icons/estresado.svg"/>
+      <span class="label">Estresado</span>
+    </div>
+    <div class="emotion" [ngStyle]="{'background-color': '#FFD6D6'}" 
+         [routerLink]="['/tips']" 
+         [queryParams]="{emotion: 'Enojado'}">
+      <img src="assets/icons/enojado.svg"/>
+      <span class="label">Enojado</span>
+    </div>
+    <div class="emotion" [ngStyle]="{'background-color': '#E3E4FA'}" 
+         [routerLink]="['/tips']" 
+         [queryParams]="{emotion: 'Preocupado'}">
+      <img src="assets/icons/preocupado.svg"/>
+      <span class="label">Preocupado</span>
+    </div>
+  </div>
+</div>
