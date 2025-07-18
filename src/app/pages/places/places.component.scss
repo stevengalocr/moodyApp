@@ -283,6 +283,10 @@
 }
 
 .map-face-icon {
+  width: 55px !important;
+  height: 55px !important;
+  max-width: 55px !important;
+  max-height: 55px !important;
   cursor: pointer;
   transition: transform 0.18s, filter 0.18s;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));

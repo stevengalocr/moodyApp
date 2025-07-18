@@ -81,9 +81,9 @@
             <ng-container *ngFor="let place of cluster.places; let i = index">
               <ng-container *ngIf="place.latitude && place.longitude">
                 <image 
-                  [attr.x]="placeToSvgX(place) - 32 + getClusterOffset(cluster, i).x"
-                  [attr.y]="placeToSvgY(place) - 32 + getClusterOffset(cluster, i).y"
-                  width="64" height="64"
+                  [attr.x]="placeToSvgX(place) - 44 + getClusterOffset(cluster, i).x"
+                  [attr.y]="placeToSvgY(place) - 44 + getClusterOffset(cluster, i).y"
+                  width="88" height="88"
                   [attr.href]="getEmotionFacePath(selectedEmotion ? selectedEmotion : getEmotionForPlace(place))"
                   class="map-face-icon {{getClusterOffsetClass(i)}}" style="border-radius: 50%; box-shadow: 0 2px 12px rgba(0,0,0,0.18); background: white;"
                   [attr.alt]="place.name" />
