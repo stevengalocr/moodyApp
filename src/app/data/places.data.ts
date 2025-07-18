@@ -1,6 +1,8 @@
 export interface PlaceLink {
   type: string;
   url: string;
+  latitude?: number;
+  longitude?: number;
 }
 
 export interface Place {
@@ -9,6 +11,8 @@ export interface Place {
   description: string;
   contact?: string;
   links?: PlaceLink[];
+  latitude?: number;
+  longitude?: number;
 }
 
 export interface Emotion {
@@ -33,7 +37,9 @@ export const placesData: Emotion[] = [
           { type: 'website', url: 'https://www.biocorredores.org/' },
           { type: 'facebook', url: 'https://www.facebook.com/' },
           { type: 'rome2rio', url: 'https://www.rome2rio.com/' }
-        ]
+        ],
+        latitude: 9.94345,
+        longitude: -84.1155
       },
       {
         name: 'Café Miel',
@@ -41,14 +47,18 @@ export const placesData: Emotion[] = [
         description: 'Luminoso y acogedor, perfecto para compartir un momento dulce.',
         links: [
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' }
-        ]
+        ],
+        latitude: 9.954,
+        longitude: -84.105
       },
       {
         name: 'Lúcida Cafetería',
         location: 'Rohrmoser, San José',
         description: 'Café artesanal, ambiente creativo y fotografías estéticas.',
         contact: '+506 8988 6776',
-        links: []
+        links: [],
+        latitude: 9.941,
+        longitude: -84.114
       },
       {
         name: 'Parque La Libertad',
@@ -60,7 +70,9 @@ export const placesData: Emotion[] = [
           { type: 'website', url: 'https://www.pasteleriasanjose.com/' },
           { type: 'website', url: 'https://www.biocorredores.org/' },
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' }
-        ]
+        ],
+        latitude: 9.933,
+        longitude: -84.06
       },
       {
         name: 'Hyatt Centric Spa',
@@ -71,7 +83,9 @@ export const placesData: Emotion[] = [
           { type: 'facebook', url: 'https://www.facebook.com/' },
           { type: 'hyatt', url: 'https://www.hyatt.com/' },
           { type: 'ihg', url: 'https://www.ihg.com/' }
-        ]
+        ],
+        latitude: 9.919,
+        longitude: -84.139
       }
     ]
   },
@@ -86,7 +100,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'website', url: 'https://www.tevucr.org/' },
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 9.9401,
+        longitude: -84.0713
       },
       {
         name: 'Parque Natural Urbano Lorne Ross',
@@ -95,7 +111,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'website', url: 'https://www.tevucr.org/' },
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 9.9384,
+        longitude: -84.1972
       },
       {
         name: 'Parque del Este',
@@ -105,7 +123,9 @@ export const placesData: Emotion[] = [
           { type: 'website', url: 'https://www.gam.cl/' },
           { type: 'website', url: 'https://www.ihg.com/' },
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 9.9361,
+        longitude: -84.0198
       },
       {
         name: 'Centro Cultural GAM',
@@ -114,7 +134,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'instagram', url: 'https://www.instagram.com/' },
           { type: 'website', url: 'https://www.gamcultural.com/' }
-        ]
+        ],
+        latitude: 9.9320,
+        longitude: -84.0560
       }
     ]
   },
@@ -130,7 +152,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'website', url: 'https://www.visitcostarica.com/' },
           { type: 'website', url: 'https://www.gamcultural.com/' }
-        ]
+        ],
+        latitude: 9.8630,
+        longitude: -83.9190
       },
       {
         name: 'Parque Simón Bolívar',
@@ -140,7 +164,9 @@ export const placesData: Emotion[] = [
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' },
           { type: 'website', url: 'https://www.tevucr.org/' },
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 9.9320,
+        longitude: -84.0560
       },
       {
         name: 'Lorne Ross',
@@ -148,7 +174,9 @@ export const placesData: Emotion[] = [
         description: 'Humedales y calma.',
         links: [
           { type: 'website', url: 'https://www.tevucr.org/' }
-        ]
+        ],
+        latitude: 9.9080,
+        longitude: -84.1460
       },
       {
         name: 'Café St. Honoré',
@@ -157,7 +185,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' },
           { type: 'website', url: 'https://www.visitcostarica.com/' }
-        ]
+        ],
+        latitude: 9.9520,
+        longitude: -84.0560
       },
       {
         name: 'Parque del Este',
@@ -166,7 +196,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'website', url: 'https://www.gam.cl/' },
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 9.9330,
+        longitude: -84.0500
       }
     ]
   },
@@ -183,7 +215,9 @@ export const placesData: Emotion[] = [
           { type: 'website', url: 'https://www.facebook.com/' },
           { type: 'website', url: 'https://www.visitcostarica.com/' },
           { type: 'website', url: 'https://www.cloudforestmonteverde.com/' }
-        ]
+        ],
+        latitude: 10.30345,
+        longitude: -84.78771
       },
       {
         name: 'Parque Nacional Braulio Carrillo',
@@ -192,7 +226,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'website', url: 'https://www.getyourguide.com/' },
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 10.0500,
+        longitude: -84.0700
       },
       {
         name: 'Carpintera Hills',
@@ -200,15 +236,19 @@ export const placesData: Emotion[] = [
         description: 'Aventura en selva a 20 min de SJ.',
         links: [
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' }
-        ]
+        ],
+        latitude: 9.9180,
+        longitude: -84.0350
       },
       {
         name: 'Bosque Mágico de Prusia',
         location: 'Heredia',
-        description: 'Info en VisitCostaRica, ₡1 000 entrada.',
+        description: 'Es un bosque de pinos y cipreses conocido por su ambiente mágico y sus senderos pintorescos.',
         links: [
           { type: 'website', url: 'https://www.visitcostarica.com/' }
-        ]
+        ],
+        latitude: 9.9800,
+        longitude: -84.1200
       },
       {
         name: 'Peace Lodge / La Paz Waterfall Gardens',
@@ -216,7 +256,9 @@ export const placesData: Emotion[] = [
         description: 'En GAM caso, relajación y cascadas.',
         links: [
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 10.0100,
+        longitude: -84.0200
       }
     ]
   },
@@ -233,7 +275,9 @@ export const placesData: Emotion[] = [
           { type: 'biocorredores', url: 'https://www.biocorredores.org/' },
           { type: 'ihg', url: 'https://www.ihg.com/' },
           { type: 'facebook', url: 'https://www.facebook.com/' }
-        ]
+        ],
+        latitude: 9.919,
+        longitude: -84.139
       },
       {
         name: 'Casa El Dorado Spa',
@@ -242,7 +286,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' },
           { type: 'website', url: 'https://www.visitcostarica.com/' }
-        ]
+        ],
+        latitude: 9.92,
+        longitude: -84.138
       },
       {
         name: 'AC Hotel Spa',
@@ -253,7 +299,9 @@ export const placesData: Emotion[] = [
           { type: 'rome2rio', url: 'https://www.rome2rio.com/' },
           { type: 'marriott', url: 'https://www.marriott.com/' },
           { type: 'website', url: 'https://www.visitcostarica.com/' }
-        ]
+        ],
+        latitude: 9.9195,
+        longitude: -84.1375
       },
       {
         name: 'Metamorfosis Wellness Center',
@@ -261,7 +309,9 @@ export const placesData: Emotion[] = [
         description: 'Centro de terapias alternativas para liberar ira.',
         links: [
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' }
-        ]
+        ],
+        latitude: 9.918,
+        longitude: -84.136
       },
       {
         name: 'Desestress Spa',
@@ -273,7 +323,9 @@ export const placesData: Emotion[] = [
           { type: 'hyatt', url: 'https://www.hyatt.com/' },
           { type: 'tripadvisor', url: 'https://www.tripadvisor.com/' },
           { type: 'yelp', url: 'https://www.yelp.com/' }
-        ]
+        ],
+        latitude: 9.9185,
+        longitude: -84.1385
       }
     ]
   },
@@ -289,7 +341,9 @@ export const placesData: Emotion[] = [
         links: [
           { type: 'website', url: 'https://www.gam.cl/' },
           { type: 'website', url: 'https://www.gamcultural.com/' }
-        ]
+        ],
+        latitude: 9.9190,
+        longitude: -84.1390
       },
       {
         name: 'Centro Campo Verde',
@@ -298,7 +352,9 @@ export const placesData: Emotion[] = [
         contact: '8819 9919',
         links: [
           { type: 'website', url: 'https://www.gamcultural.com/' }
-        ]
+        ],
+        latitude: 9.9185,
+        longitude: -84.1380
       },
       {
         name: 'Yoga-Meditación GAM Cultural',
@@ -309,7 +365,9 @@ export const placesData: Emotion[] = [
           { type: 'website', url: 'https://www.gamcultural.com/' },
           { type: 'website', url: 'https://www.gam.cl/' },
           { type: 'wikipedia', url: 'https://es.wikipedia.org/' }
-        ]
+        ],
+        latitude: 9.8630,
+        longitude: -83.9190
       }
     ]
   }

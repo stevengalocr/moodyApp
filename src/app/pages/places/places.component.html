@@ -45,8 +45,52 @@
         </div>
       </div>
 
+      <div *ngIf="selectedPlace" class="highlighted-place-card">
+        <div class="highlighted-header">
+          <img [src]="getEmotionFacePath(selectedEmotion ? selectedEmotion : getEmotionForPlace(selectedPlace))" 
+               alt="Carita" class="highlighted-face" />
+          <div class="highlighted-info">
+            <h3>{{ selectedPlace.name }}</h3>
+            <p class="description">{{ selectedPlace.description }}</p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <img src="assets/icons/location.svg" alt="Ubicación" />
+                <span>{{ selectedPlace.location }}</span>
+              </div>
+              <div class="contact-item" *ngIf="selectedPlace.contact">
+                <img src="assets/icons/phone.svg" alt="Teléfono" />
+                <span>{{ selectedPlace.contact }}</span>
+              </div>
+              <ng-container *ngIf="selectedPlace.links">
+                <div class="contact-item" *ngFor="let link of selectedPlace.links">
+                  <img src="assets/icons/link.svg" alt="Enlace" />
+                  <a [href]="link.url" target="_blank">{{ link.type }}</a>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <button class="close-btn" (click)="selectedPlace = null">×</button>
+      </div>
+
       <div class="map-container">
-        <img src="assets/images/mapa-lugares.png" alt="Mapa de lugares" class="map-image"/>
+        <svg class="map-svg" viewBox="0 0 764.4043 695.8172" xmlns="http://www.w3.org/2000/svg">
+          <image href="assets/images/mapa_CR.svg" x="0" y="0" width="764.4043" height="695.8172" />
+          <!-- Caritas overlay -->
+          <ng-container *ngFor="let cluster of getClusteredPlaces()">
+            <ng-container *ngFor="let place of cluster.places; let i = index">
+              <ng-container *ngIf="place.latitude && place.longitude">
+                <image 
+                  [attr.x]="placeToSvgX(place) - 32 + getClusterOffset(cluster, i).x"
+                  [attr.y]="placeToSvgY(place) - 32 + getClusterOffset(cluster, i).y"
+                  width="64" height="64"
+                  [attr.href]="getEmotionFacePath(selectedEmotion ? selectedEmotion : getEmotionForPlace(place))"
+                  class="map-face-icon {{getClusterOffsetClass(i)}}" style="border-radius: 50%; box-shadow: 0 2px 12px rgba(0,0,0,0.18); background: white;"
+                  [attr.alt]="place.name" />
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </svg>
       </div>
     </div>
   </div>
